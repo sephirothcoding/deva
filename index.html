@@ -3,26 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galerie și Video</title>
+  <title>Profil Deva</title>
   <style>
     * {
       box-sizing: border-box;
     }
 
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 40px;
-      background-color: #f0f0f0;
+      background: url('https://xatimg.com/image/DjkscBjjrRgc.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Arial', sans-serif;
     }
 
     .outer-container {
       max-width: 1200px;
       margin: 0 auto;
-      background: #fff;
+      background: rgba(255, 255, 255, 0.9);
       padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
     .inner-container {
@@ -31,6 +32,7 @@
       border: 1px solid #ddd;
       border-radius: 12px;
       overflow: hidden;
+      background: #fff;
     }
 
     .left-column,
@@ -46,14 +48,32 @@
       flex-direction: column;
       align-items: center;
       gap: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .profile-info {
+      text-align: center;
+    }
+
+    .profile-name {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
     }
 
     .avatar {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .profile-id {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 8px;
     }
 
     iframe {
@@ -67,6 +87,9 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
+      max-height: 700px;
+      overflow-y: auto;
+      background-color: #fff;
     }
 
     .right-column img {
@@ -95,10 +118,11 @@
 
       <!-- Coloana stângă -->
       <div class="left-column">
-        <!-- 👩‍🦱 Avatar deasupra video -->
-        <img src="https://via.placeholder.com/100x100.png?text=Avatar" alt="Avatar" class="avatar">
-        
-        <!-- 🎥 Video YouTube -->
+        <div class="profile-info">
+          <div class="profile-name">Deva</div>
+          <img src="https://xatimg.com/image/lRDP5chEVPlZ.gif" alt="Avatar" class="avatar">
+          <div class="profile-id">Ambra (1070107)</div>
+        </div>
         <iframe 
           src="https://www.youtube.com/embed/6xUnSVTh8fI" 
           title="Tame Impala - Let It Happen" 
@@ -106,12 +130,11 @@
         </iframe>
       </div>
 
-      <!-- Coloana dreaptă -->
+      <!-- Coloana dreaptă (galerie scrollabilă) -->
       <div class="right-column">
-        <!-- 🖼️ Galerie imagini -->
-        <img src="https://via.placeholder.com/600x400?text=Imagine+1" alt="Imagine 1">
-        <img src="https://via.placeholder.com/600x400?text=Imagine+2" alt="Imagine 2">
-        <img src="https://via.placeholder.com/600x400?text=Imagine+3" alt="Imagine 3">
+        <img src="https://xatimg.com/image/6gIKLO4H2Ywg.gif" alt="Imagine 1">
+        <img src="https://xatimg.com/image/r2Cdutrn6tdQ.gif" alt="Imagine 2">
+        <img src="https://xatimg.com/image/4zjcFYr1J0JU.gif" alt="Imagine 3">
       </div>
 
     </div>
