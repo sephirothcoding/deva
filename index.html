@@ -15,15 +15,29 @@
       background: url('https://xatimg.com/image/DjkscBjjrRgc.jpg') no-repeat center center fixed;
       background-size: cover;
       font-family: 'Arial', sans-serif;
+      color: #2d013c;
     }
 
     .outer-container {
       max-width: 750px;
       margin: 0 auto;
-      background: rgba(255, 255, 255, 0.8);
-      padding: 20px;
+      background: url('https://xatimg.com/image/DjkscBjjrRgc.jpg') no-repeat center center;
+      background-size: cover;
       border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .outer-container::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      border-radius: 15px;
+      z-index: -1;
     }
 
     .inner-container {
@@ -116,6 +130,15 @@
       }
     }
 
+    .motto {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
     @media (max-width: 768px) {
       .inner-container {
         flex-direction: column;
@@ -156,6 +179,8 @@
 
     </div>
   </div>
+
+  <div class="motto">Res sacra est omnis vita.</div>
 
 </body>
 </html>
