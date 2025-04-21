@@ -68,11 +68,33 @@
       text-align: center;
     }
 
-    .profile-name {
-      font-size: 1.4rem;
+    .profile-name,
+    .profile-id,
+    .motto {
+      font-size: 1.2rem;
       font-weight: bold;
       margin-bottom: 8px;
       color: #2d013c;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    .profile-name {
+      font-size: 1.4rem;
+      color: #9b46bc;
+    }
+
+    .profile-id {
+      font-size: 1rem;
+      color: #64168b;
+    }
+
+    .motto {
+      font-size: 1.1rem;
+      color: #fff;
+      font-style: italic;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     }
 
     .avatar {
@@ -82,12 +104,6 @@
       object-fit: cover;
       box-shadow: 0 0 15px 4px rgba(186, 85, 211, 0.8);
       transition: transform 0.3s ease-in-out;
-    }
-
-    .profile-id {
-      font-size: 0.85rem;
-      color: #4b1458;
-      margin-top: 4px;
     }
 
     iframe {
@@ -130,15 +146,6 @@
       }
     }
 
-    .motto {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 1.2rem;
-      font-style: italic;
-      color: #fff;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-    }
-
     @media (max-width: 768px) {
       .inner-container {
         flex-direction: column;
@@ -168,6 +175,9 @@
           title="Tame Impala - Let It Happen" 
           allowfullscreen>
         </iframe>
+
+        <!-- Motto adăugat sub YouTube -->
+        <div class="motto">Res sacra est omnis vita.</div>
       </div>
 
       <!-- Coloana dreaptă -->
@@ -179,8 +189,6 @@
 
     </div>
   </div>
-
-  <div class="motto">Res sacra est omnis vita.</div>
 
 </body>
 </html>
