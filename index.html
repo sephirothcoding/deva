@@ -1,86 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="ro">
 <head>
-<style>
-  body {
-    background-color: #8A2BE2;
-    transition: 15s;
-    margin: 0;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie și Video</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  a {
-    text-decoration: none;
-  }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
 
-  * {
-    margin: 0;
-  }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
 
-  ::-webkit-scrollbar {
-    width: 5px;
-    background: #FFCBDB;
-  }
+    .left-column, .right-column {
+      flex: 1;
+      min-width: 300px;
+    }
 
-  ::-webkit-scrollbar-thumb {
-    background: #FFCBDB;
-  }
+    .left-column iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
 
-  #content {
-    width: 450px;
-    padding: 20px;
-    max-height: 400px;
-    overflow: hidden;
-    position: relative;
-  }
+    .right-column {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
 
-  #content p {
-    overflow: auto;
-    height: 420px;
-    position: absolute;
-    width: 470px;
-    background-size: cover;
-  }
+    .right-column img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
 
-  img {
-    opacity: 1;
-    transition: all ease-in-out 0.4s;
-    brightness: 0.2;
-  }
+    @media (max-width: 768px) {
+      .left-column iframe {
+        height: 250px;
+      }
+    }
 
-  img:hover {
-    opacity: 1;
-    brightness: 1;
-    -webkit-transform: rotateZ(0deg);
-  }
-
-  table:hover {
-    transform: scale();
-    -webkit-transform: scale();
-  }
-
-  #xatstyinfo,
-  #xatstyabout0,
-  #xatstysidead,
-  #xatstywhatpoll,
-  hr {
-    display: none;
-  }
-</style>
+    @media (max-width: 480px) {
+      .left-column iframe {
+        height: 200px;
+      }
+    }
+  </style>
 </head>
-   
 <body>
-<div id="NotAllowedme">
-  <div id="content">
-    <p>
-      <img src="https://xatimg.com/image/Z6jkkk4oQA92.jpg" width="450" height="380" style="border-radius:15px;border:0px;border-style:solid;border-color:#ff3366;padding:3px;background:url()http://">
-      <br>
-      <img src="https://xatimg.com/image/GJst3OG3k7Se.jpg" width="230" height="350" style="border-radius:15px;border:0px;border-style:solid;border-color:rgb(70,157,245);padding:3px;background:url()http://">
-    </p>
+
+  <div class="container">
+    <div class="left-column">
+      <!-- 🎥 Videoclip YouTube real -->
+      <iframe 
+        src="https://www.youtube.com/embed/6xUnSVTh8fI" 
+        title="Tame Impala - Let It Happen" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="right-column">
+      <!-- 🖼️ Galerie de imagini -->
+      <img src="https://via.placeholder.com/600x400?text=Imagine+1" alt="Imagine 1">
+      <img src="https://via.placeholder.com/600x400?text=Imagine+2" alt="Imagine 2">
+      <img src="https://via.placeholder.com/600x400?text=Imagine+3" alt="Imagine 3">
+    </div>
   </div>
 
-  <div align="center">
-    <iframe width="300" height="150" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HEReE" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
 </body>
 </html>
