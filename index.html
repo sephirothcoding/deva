@@ -29,16 +29,6 @@
       z-index: 1;
     }
 
-    .outer-container::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(255, 255, 255, 0.1); /* Mai mare transparență */
-      backdrop-filter: blur(8px);
-      border-radius: 15px;
-      z-index: -1;
-    }
-
     .inner-container {
       display: flex;
       flex-wrap: wrap;
@@ -47,6 +37,7 @@
       overflow: hidden;
       background: none; /* Transparent pe fundal */
       width: 100%;
+      position: relative;
     }
 
     .inner-container > div {
