@@ -21,8 +21,7 @@
     .outer-container {
       max-width: 750px;
       margin: 0 auto;
-      background: url('https://xatimg.com/image/DjkscBjjrRgc.jpg') no-repeat center center;
-      background-size: cover;
+      background: none;  /* Fundal transparent */
       border-radius: 15px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.3);
       padding: 20px;
@@ -34,7 +33,7 @@
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.7); /* Pentru efectul de transparență */
       backdrop-filter: blur(8px);
       border-radius: 15px;
       z-index: -1;
@@ -46,7 +45,7 @@
       border: 1px solid #ddd;
       border-radius: 12px;
       overflow: hidden;
-      background: linear-gradient(145deg, #f7d8f0, #e3c8f6);
+      background: none; /* Transparent pe fundal */
     }
 
     .left-column,
